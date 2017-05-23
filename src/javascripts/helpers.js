@@ -46,7 +46,6 @@ export function validateForm(formData, constraint) {
   console.log('Called validateForm');
   switch (constraint) {
     case 'email': {
-      console.log('Checking email constraint');
       return validate(formData, emailConstraint);
     }
     case 'password': {
@@ -56,8 +55,6 @@ export function validateForm(formData, constraint) {
       return validate(formData, urlConstraint);
     }
     default:
-      console.log('Checking all constraint');
-
       return validate(formData, formConstraints);
   }
 }
